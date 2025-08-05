@@ -1,4 +1,4 @@
-using NESCGLE
+include("utils.jl")
 using OrnsteinZernike
 
 # In order to solve an Ornstein-Zernike equation, there are a number of things that need to be specified.
@@ -24,4 +24,5 @@ sol = solve(system, closure)
 
 save_data("test.dat", [sol.r sol.gr])
 #save_data("test.dat", [sol.k sol.Sk])
+
 
