@@ -1,4 +1,4 @@
-using NESCGLE
+include("utils.jl")
 using OrnsteinZernike
 
 # Potencial
@@ -25,3 +25,4 @@ sol = solve(system, closure, method);
 
 save_data("test.dat", [sol.r sol.gr])
 #save_data("test.dat", [sol.k sol.Sk])
+
