@@ -1,4 +1,4 @@
-using NESCGLE
+include("utils.jl")
 using OrnsteinZernike
 
 # Potential
@@ -56,3 +56,4 @@ for (idx, sol) in enumerate(SOL)
     save_data("sdk_"*string(idx)*".dat", [sol.k sol.Sk])
 end
 #save_data("test.dat", [sol.r sol.gr])
+
