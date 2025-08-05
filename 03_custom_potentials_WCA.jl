@@ -1,4 +1,4 @@
-using NESCGLE
+include("utils.jl")
 using OrnsteinZernike
 
 # Potential
@@ -23,5 +23,6 @@ closure = PercusYevick()
 method = NgIteration()
 
 sol = solve(system, closure, method)
-save_data("gdr_phi_"*NESCGLE.complete_str(ϕ)*".dat", [sol.r sol.gr])
-save_data("sdk_phi_"*NESCGLE.complete_str(ϕ)*".dat", [sol.k sol.Sk])
+save_data("gdr_phi.dat", [sol.r sol.gr])
+save_data("sdk_phi.dat", [sol.k sol.Sk])
+
